@@ -3,26 +3,33 @@ class Person
 
   def initialize(name, age)
     @name = name
-    @age = age
+    @age = age.to_i
   end
 
   def nickname
-    # YOUR IMPLEMENTATION HERE
-    'nickname'
+    return @name
   end
 
   def birth_year
-    # YOUR IMPLEMENTATION HERE
-    1990
+    return 2016 - @age
   end
 
   def introduction
-    # YOUR IMPLEMENTATION HERE
-    'introduce'
+    return "Hi, my name is " + @name + " and I am " + @age.to_s + " years old."
   end
 
   def fib_number
-    # YOUR IMPLMENTATION HERE
-    0
+    # 0 indexed: 1, 1, 2, 3, 5, 8, so first 1 is 0th fib num
+    if @age <= 1
+      return 1
+    end
+    prev = 1
+    curr = 2
+    i = 2
+    while i < @age
+      prev, curr = curr, curr + prev
+      i += 1
+    end
+    return curr
   end
 end

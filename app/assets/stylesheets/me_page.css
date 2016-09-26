@@ -1,0 +1,14 @@
+#from {
+	background-color: green;
+	color: white;
+}
+
+#fact {
+	font-weight: bold;
+	color: red;
+}
+
+#excited {
+	text-decoration: underline;
+	color: yellow;
+}
